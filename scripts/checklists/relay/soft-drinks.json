@@ -1,0 +1,14 @@
+[
+  {"type":"Coca-Cola"},
+  {"type":"Pepsi"},
+  {"type":"Sprite"},
+  {"type":"Fanta"},
+  {"type":"Red Bull"},
+  {"type":"Dr Pepper"},
+  {"type":"Mountain Dew"},
+  {"type":"7 Up"},
+  {"type":"Gatorade"},
+  {"type":"Monster Energy","startsWith":true},
+  {"type":"Irn-Bru"},
+  {"type":"Thums Up"}
+]

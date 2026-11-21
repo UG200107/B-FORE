@@ -1,0 +1,14 @@
+[
+  {"type":"Boeing 747","startsWith":true},
+  {"type":"Concorde"},
+  {"type":"Airbus A380"},
+  {"type":"Wright Flyer"},
+  {"type":"Spitfire","expect":"Supermarine Spitfire"},
+  {"type":"Boeing 737","startsWith":true},
+  {"type":"Lockheed SR-71 Blackbird"},
+  {"type":"F-16","expect":"General Dynamics F-16 Fighting Falcon"},
+  {"type":"Douglas DC-3"},
+  {"type":"Boeing B-52 Stratofortress"},
+  {"type":"Messerschmitt Bf 109"},
+  {"type":"Airbus A320","startsWith":true}
+]

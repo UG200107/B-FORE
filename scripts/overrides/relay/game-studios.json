@@ -1,0 +1,7 @@
+{
+  "_comment": "Curated. add: [name, year, maker?, aliases?].",
+  "cd-projekt-red": {"aliases":["CD Projekt","CD Projekt Red"]},
+  "add": [
+    ["Rockstar Games",1998,"Take-Two Interactive",["Rockstar"]]
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {"type":"Delta Air Lines"},
+  {"type":"American Airlines"},
+  {"type":"United Airlines"},
+  {"type":"Lufthansa","startsWith":true},
+  {"type":"British Airways"},
+  {"type":"Emirates","startsWith":true},
+  {"type":"Air France"},
+  {"type":"Qantas","startsWith":true},
+  {"type":"KLM","startsWith":true},
+  {"type":"Ryanair","startsWith":true},
+  {"type":"Singapore Airlines"},
+  {"type":"Pan Am","startsWith":true}
+]

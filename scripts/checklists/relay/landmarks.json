@@ -1,0 +1,12 @@
+[
+  {"type":"Eiffel Tower"},
+  {"type":"Statue of Liberty"},
+  {"type":"Taj Mahal"},
+  {"type":"Colosseum"},
+  {"type":"Great Wall of China","startsWith":true},
+  {"type":"Big Ben","startsWith":true},
+  {"type":"Sydney Opera House"},
+  {"type":"Burj Khalifa"},
+  {"type":"Machu Picchu"},
+  {"type":"Stonehenge"}
+]

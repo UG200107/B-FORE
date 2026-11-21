@@ -1,0 +1,14 @@
+[
+  {"type":"PlayStation 5"},
+  {"type":"PS5","expect":"PlayStation 5"},
+  {"type":"PlayStation 2"},
+  {"type":"Xbox 360"},
+  {"type":"Nintendo Switch"},
+  {"type":"Wii"},
+  {"type":"Game Boy"},
+  {"type":"Nintendo 64"},
+  {"type":"Sega Genesis","expect":"Sega Mega Drive"},
+  {"type":"Atari 2600"},
+  {"type":"Steam Deck"},
+  {"type":"Nintendo DS"}
+]

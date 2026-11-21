@@ -1,0 +1,21 @@
+{
+  "_comment": "Curated. add: [name, year, maker?, aliases?].",
+  "add": [
+    ["Judo",1882,"Japan"],
+    ["Brazilian jiu-jitsu",1925,"Brazil",["BJJ"]],
+    ["Shotokan",1938,"Japan"],
+    ["Sambo",1938,"Soviet Union"],
+    ["Vovinam",1938,"Vietnam"],
+    ["Taekwondo",1955,"South Korea"],
+    ["Hwa Rang Do",1960,"South Korea"],
+    ["Kyokushin",1964,"Japan"],
+    ["Kickboxing",1966,"Japan"],
+    ["Jeet Kune Do",1967,"United States"],
+    ["Kudo",1981,"Japan"],
+    ["Bartitsu",1898,"United Kingdom"],
+    ["Mixed martial arts",1993,"United States",["MMA"]],
+    ["Karate",1922,"Japan"],
+    ["Aikido",1942,"Japan"],
+    ["Boxing",1867,"United Kingdom",["Modern boxing","Queensberry rules"]]
+  ]
+}

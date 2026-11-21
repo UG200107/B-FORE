@@ -1,0 +1,14 @@
+[
+  {"type":"Hydrogen"},
+  {"type":"Oxygen"},
+  {"type":"Gold"},
+  {"type":"Iron"},
+  {"type":"Copper"},
+  {"type":"Lead"},
+  {"type":"Uranium"},
+  {"type":"Helium"},
+  {"type":"Fe","expect":"Iron"},
+  {"type":"Au","expect":"Gold"},
+  {"type":"Plutonium"},
+  {"type":"Carbon"}
+]

@@ -1,0 +1,46 @@
+{
+  "_comment": "Hand fixes for songs, applied by scripts/fetch-songs.mjs (via lib/famous-topic.mjs). Keys are generated item ids: any TopicItem field can be overridden, \"aliases\" are ADDED to the generated ones, \"exclude\": true drops the item. \"_add\" lists songs the source misses (e.g. no date on Wikidata); they are always kept. node scripts/verify-songs.mjs suggests entries for any checklist failure.",
+  "_add": [
+    {
+      "name": "The House of the Rising Sun",
+      "year": 1964,
+      "franchise": "The House of the Rising Sun",
+      "company": "The Animals",
+      "aliases": [
+        "House of the Rising Sun"
+      ],
+      "fame": 43
+    },
+    {
+      "name": "Fairytale",
+      "year": 2009,
+      "franchise": "Fairytale",
+      "company": "Alexander Rybak",
+      "fame": 38
+    },
+    {
+      "name": "Greensleeves",
+      "year": 1580,
+      "company": "Traditional",
+      "franchise": "Greensleeves"
+    },
+    {
+      "name": "Salve Regina",
+      "year": 1050,
+      "company": "Hermann of Reichenau (attributed)",
+      "franchise": "Salve Regina"
+    },
+    {
+      "name": "Magnificat",
+      "year": 80,
+      "company": "Gospel of Luke",
+      "franchise": "Magnificat"
+    }
+  ],
+  "stille-nacht-heilige-nacht": {
+    "aliases": [
+      "Silent Night",
+      "Silent Night, Holy Night"
+    ]
+  }
+}

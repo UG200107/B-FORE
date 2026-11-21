@@ -1,0 +1,12 @@
+[
+  {"type":"Chess","startsWith":true},
+  {"type":"Monopoly"},
+  {"type":"Scrabble"},
+  {"type":"Risk","startsWith":true},
+  {"type":"Catan","expect":"The Settlers of Catan"},
+  {"type":"Clue","startsWith":true},
+  {"type":"Ticket to Ride"},
+  {"type":"Trivial Pursuit"},
+  {"type":"Pandemic"},
+  {"type":"Cluedo"}
+]

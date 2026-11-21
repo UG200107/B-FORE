@@ -1,0 +1,14 @@
+[
+  {"type":"Jazz"},
+  {"type":"Rock and roll"},
+  {"type":"Hip hop","startsWith":true},
+  {"type":"Blues"},
+  {"type":"Reggae"},
+  {"type":"Punk rock"},
+  {"type":"Heavy metal"},
+  {"type":"Disco"},
+  {"type":"K-pop"},
+  {"type":"Techno"},
+  {"type":"Grunge"},
+  {"type":"Country music","startsWith":true}
+]

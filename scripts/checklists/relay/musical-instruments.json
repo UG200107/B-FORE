@@ -1,0 +1,14 @@
+[
+  {"type":"Piano"},
+  {"type":"Violin"},
+  {"type":"Saxophone"},
+  {"type":"Electric guitar"},
+  {"type":"Synthesizer","expect":"Moog synthesizer"},
+  {"type":"Harmonica"},
+  {"type":"Theremin"},
+  {"type":"Ukulele"},
+  {"type":"Clarinet"},
+  {"type":"Accordion"},
+  {"type":"Fender Stratocaster"},
+  {"type":"Harmonica"}
+]

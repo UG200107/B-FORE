@@ -1,0 +1,12 @@
+[
+  {"type":"Real Madrid","startsWith":true},
+  {"type":"FC Barcelona","startsWith":true},
+  {"type":"Manchester United","startsWith":true},
+  {"type":"Liverpool","startsWith":true},
+  {"type":"Bayern Munich","expect":"FC Bayern Munich"},
+  {"type":"Juventus","startsWith":true},
+  {"type":"New York Yankees","startsWith":true},
+  {"type":"Los Angeles Lakers"},
+  {"type":"Dallas Cowboys"},
+  {"type":"Boca Juniors","startsWith":true}
+]

@@ -1,0 +1,12 @@
+[
+  {"type":"Euro"},
+  {"type":"United States dollar"},
+  {"type":"Pound sterling"},
+  {"type":"Japanese yen","expect":"Yen"},
+  {"type":"Swiss franc"},
+  {"type":"Indian rupee"},
+  {"type":"Renminbi"},
+  {"type":"Deutsche Mark"},
+  {"type":"Russian ruble"},
+  {"type":"Bitcoin"}
+]

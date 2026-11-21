@@ -1,0 +1,14 @@
+[
+  {"type":"Apple","startsWith":true},
+  {"type":"Microsoft"},
+  {"type":"Google","startsWith":true},
+  {"type":"Amazon","startsWith":true},
+  {"type":"IBM"},
+  {"type":"Intel","startsWith":true},
+  {"type":"Samsung","startsWith":true},
+  {"type":"Sony","startsWith":true},
+  {"type":"Nvidia","startsWith":true},
+  {"type":"Meta","startsWith":true},
+  {"type":"Tesla","startsWith":true},
+  {"type":"Oracle","startsWith":true}
+]

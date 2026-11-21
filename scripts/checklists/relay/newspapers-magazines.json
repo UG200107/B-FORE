@@ -1,0 +1,14 @@
+[
+  {"type":"The New York Times"},
+  {"type":"The Washington Post"},
+  {"type":"The Guardian"},
+  {"type":"The Times"},
+  {"type":"The Economist"},
+  {"type":"Time","startsWith":true},
+  {"type":"Vogue","startsWith":true},
+  {"type":"Rolling Stone"},
+  {"type":"National Geographic"},
+  {"type":"Le Monde"},
+  {"type":"Playboy"},
+  {"type":"The Wall Street Journal"}
+]

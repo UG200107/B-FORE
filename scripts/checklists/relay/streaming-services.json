@@ -1,0 +1,14 @@
+[
+  {"type":"Netflix"},
+  {"type":"Spotify"},
+  {"type":"Disney+"},
+  {"type":"Hulu"},
+  {"type":"YouTube"},
+  {"type":"Amazon Prime Video"},
+  {"type":"HBO Max"},
+  {"type":"Twitch"},
+  {"type":"Apple Music"},
+  {"type":"Apple TV+"},
+  {"type":"Pandora","startsWith":true},
+  {"type":"Crunchyroll"}
+]

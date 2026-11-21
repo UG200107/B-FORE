@@ -1,0 +1,33 @@
+{
+  "_comment": "Hand fixes for TV shows, applied by scripts/fetch-tv.mjs (via lib/famous-topic.mjs). Keys are generated item ids: any TopicItem field can be overridden, \"aliases\" are ADDED to the generated ones, \"exclude\": true drops the item. \"_add\" lists shows the source misses (e.g. no date on Wikidata); they are always kept. node scripts/verify-tv.mjs suggests entries for any checklist failure.",
+  "_add": [
+    {
+      "name": "Top of the Pops",
+      "year": 1964,
+      "franchise": "Top of the Pops",
+      "company": "BBC",
+      "aliases": [
+        "TOTP"
+      ],
+      "fame": 31
+    },
+    {
+      "name": "The Great British Bake Off",
+      "year": 2010,
+      "franchise": "The Great British Bake Off",
+      "company": "BBC",
+      "aliases": [
+        "Great British Bake Off",
+        "Bake Off",
+        "GBBO"
+      ],
+      "fame": 20
+    },
+    {
+      "name": "Great Britons",
+      "year": 2002,
+      "company": "BBC",
+      "franchise": "Great Britons"
+    }
+  ]
+}

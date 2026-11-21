@@ -1,0 +1,14 @@
+[
+  {"type":"Disneyland"},
+  {"type":"Walt Disney World","startsWith":true},
+  {"type":"Universal Studios Hollywood"},
+  {"type":"Tivoli Gardens"},
+  {"type":"Europa-Park"},
+  {"type":"Efteling"},
+  {"type":"Cedar Point"},
+  {"type":"Six Flags","startsWith":true},
+  {"type":"Legoland","startsWith":true},
+  {"type":"Disneyland Paris"},
+  {"type":"Tokyo Disneyland"},
+  {"type":"Coney Island","expect":"Luna Park (Coney Island)"}
+]

@@ -1,0 +1,9 @@
+{
+  "_comment": "Curated. add: [name, year, maker?, aliases?].",
+  "legoland-billund": {"aliases":["Legoland"]},
+  "add": [
+    ["Six Flags Over Texas",1961,"Six Flags",["Six Flags"]],
+    ["Legoland Billund",1968,"Merlin Entertainments",["Legoland"]],
+    ["Luna Park (Coney Island)",1903,"United States",["Coney Island","Luna Park"]]
+  ]
+}

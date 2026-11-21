@@ -1,0 +1,12 @@
+[
+  {"type":"Bitcoin"},
+  {"type":"Ethereum"},
+  {"type":"Dogecoin"},
+  {"type":"Litecoin"},
+  {"type":"Tether"},
+  {"type":"Solana"},
+  {"type":"Cardano"},
+  {"type":"Ripple","expect":"XRP"},
+  {"type":"Monero"},
+  {"type":"Binance Coin","expect":"BNB"}
+]

@@ -1,0 +1,10 @@
+[
+  {"type":"Windows","expect":"Microsoft Windows","startsWith":true},
+  {"type":"macOS"},
+  {"type":"Linux","startsWith":true},
+  {"type":"Android"},
+  {"type":"iOS"},
+  {"type":"MS-DOS","startsWith":true},
+  {"type":"Unix","startsWith":true},
+  {"type":"Ubuntu","startsWith":true}
+]

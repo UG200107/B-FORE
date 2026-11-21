@@ -1,0 +1,14 @@
+[
+  {"type":"Chanel","startsWith":true},
+  {"type":"Gucci","startsWith":true},
+  {"type":"Louis Vuitton","startsWith":true},
+  {"type":"Prada","startsWith":true},
+  {"type":"Nike","startsWith":true},
+  {"type":"Adidas","startsWith":true},
+  {"type":"Versace","startsWith":true},
+  {"type":"Zara","startsWith":true},
+  {"type":"H&M","startsWith":true},
+  {"type":"Burberry","startsWith":true},
+  {"type":"Dior","startsWith":true},
+  {"type":"Levi's","startsWith":true}
+]

@@ -1,0 +1,174 @@
+{
+  "_comment": "Hand fixes for cars. Keys are generated item ids: any TopicItem field can be overridden, \"aliases\" are ADDED to the generated ones, \"exclude\": true drops the item. \"_add\" lists iconic car models the sources may miss (e.g. no production date on Wikidata); they are always kept. Years = first production/model year.",
+  "_add": [
+    {
+      "name": "Citroën DS",
+      "year": 1955,
+      "franchise": "Citroën DS",
+      "company": "Citroën",
+      "aliases": [
+        "Citroen DS",
+        "DS 19",
+        "Citroën DS19",
+        "Goddess"
+      ]
+    },
+    {
+      "name": "Land Rover Defender",
+      "year": 1983,
+      "franchise": "Land Rover Defender",
+      "company": "Land Rover",
+      "aliases": [
+        "Land Rover 90",
+        "Land Rover 110",
+        "Defender",
+        "Land Rover Ninety",
+        "Land Rover One Ten"
+      ]
+    },
+    {
+      "name": "Mini",
+      "year": 1959,
+      "franchise": "Mini",
+      "company": "British Motor Corporation",
+      "aliases": [
+        "Classic Mini",
+        "Austin Mini",
+        "Morris Mini-Minor",
+        "Austin Seven Mini"
+      ]
+    },
+    {
+      "name": "Citroën 2CV",
+      "year": 1948,
+      "franchise": "Citroën 2CV",
+      "company": "Citroën",
+      "aliases": [
+        "Citroen 2CV",
+        "2CV",
+        "Deux Chevaux"
+      ]
+    },
+    {
+      "name": "Volkswagen Type 2",
+      "year": 1950,
+      "franchise": "Volkswagen Transporter",
+      "company": "Volkswagen",
+      "aliases": [
+        "VW Bus",
+        "Volkswagen Bus",
+        "VW Type 2",
+        "Kombi",
+        "VW Microbus",
+        "VW Camper",
+        "Volkswagen Microbus"
+      ]
+    },
+    {
+      "name": "DeLorean DMC-12",
+      "year": 1981,
+      "franchise": "DeLorean DMC-12",
+      "company": "DeLorean Motor Company",
+      "aliases": [
+        "DeLorean",
+        "DMC-12",
+        "DMC DeLorean"
+      ]
+    },
+    {
+      "name": "Shelby Cobra",
+      "year": 1962,
+      "franchise": "AC Cobra",
+      "company": "AC Cars",
+      "aliases": [
+        "AC Cobra",
+        "Cobra",
+        "AC Shelby Cobra"
+      ]
+    },
+    {
+      "name": "Trabant",
+      "year": 1957,
+      "franchise": "Trabant",
+      "company": "Sachsenring",
+      "aliases": [
+        "Trabi",
+        "Trabant P50"
+      ]
+    },
+    {
+      "name": "Hummer H1",
+      "year": 1992,
+      "franchise": "Hummer",
+      "company": "AM General",
+      "aliases": [
+        "Hummer"
+      ]
+    },
+    {
+      "name": "Ford Thunderbird",
+      "year": 1955,
+      "franchise": "Ford Thunderbird",
+      "company": "Ford",
+      "aliases": [
+        "Thunderbird",
+        "T-Bird"
+      ]
+    },
+    {
+      "name": "Ford GT40",
+      "year": 1964,
+      "franchise": "Ford GT40",
+      "company": "Ford",
+      "aliases": [
+        "GT40"
+      ]
+    },
+    {
+      "name": "Lamborghini Miura",
+      "year": 1966,
+      "franchise": "Lamborghini Miura",
+      "company": "Lamborghini",
+      "aliases": [
+        "Miura"
+      ]
+    },
+    {
+      "name": "Bugatti Veyron",
+      "year": 2005,
+      "franchise": "Bugatti Veyron",
+      "company": "Bugatti",
+      "aliases": [
+        "Veyron"
+      ]
+    },
+    {
+      "name": "BMW M3",
+      "year": 1986,
+      "franchise": "BMW 3 Series",
+      "company": "BMW",
+      "aliases": [
+        "M3"
+      ]
+    }
+  ],
+  "volkswagen-beetle": {
+    "aliases": [
+      "VW Beetle",
+      "Beetle",
+      "Käfer"
+    ]
+  },
+  "delorean-dmc-12": {
+    "aliases": [
+      "DeLorean",
+      "DMC-12"
+    ]
+  },
+  "ac-cobra": {
+    "aliases": [
+      "Shelby Cobra",
+      "Cobra"
+    ]
+  }
+}

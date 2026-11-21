@@ -1,0 +1,10 @@
+[
+  {"type":"Harvard University"},
+  {"type":"University of Oxford"},
+  {"type":"University of Cambridge"},
+  {"type":"Stanford University"},
+  {"type":"Massachusetts Institute of Technology"},
+  {"type":"MIT","expect":"Massachusetts Institute of Technology"},
+  {"type":"Yale University"},
+  {"type":"Sorbonne","startsWith":true}
+]

@@ -1,0 +1,4 @@
+{
+  "_comment": "Hand fixes for anime, applied by scripts/fetch-anime.mjs. Keys are generated item ids: any TopicItem field can be overridden, \"aliases\" are ADDED to the generated ones, \"exclude\": true drops the item. \"_add\" lists anime the sources miss; they are always kept. node scripts/verify-anime.mjs suggests entries for any checklist failure.",
+  "lupin-the-3rd": { "aliases": ["Lupin III", "Lupin the Third", "Lupin Sansei"] }
+}

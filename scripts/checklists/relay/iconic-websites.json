@@ -1,0 +1,14 @@
+[
+  {"type":"Google","startsWith":true},
+  {"type":"YouTube"},
+  {"type":"Wikipedia"},
+  {"type":"Facebook"},
+  {"type":"Amazon","startsWith":true},
+  {"type":"eBay"},
+  {"type":"Twitter","startsWith":true},
+  {"type":"Reddit"},
+  {"type":"Netflix"},
+  {"type":"Instagram"},
+  {"type":"Yahoo!","startsWith":true},
+  {"type":"Craigslist"}
+]

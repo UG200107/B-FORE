@@ -1,0 +1,67 @@
+{
+  "_comment": "Hand fixes for video-games, applied by scripts/fetch-games.mjs. Keys are generated item ids: any TopicItem field can be overridden, \"aliases\" are ADDED to the generated ones, \"exclude\": true drops the item. \"_add\" lists games the sources miss; they are always kept. node scripts/verify-games.mjs suggests entries for any checklist failure.",
+  "tetris": {
+    "year": 1984,
+    "company": "The Tetris Company"
+  },
+  "grand-theft-auto": {
+    "year": 1997
+  },
+  "space-invaders": {
+    "company": "Taito"
+  },
+  "donkey-kong": {
+    "franchise": "Donkey Kong"
+  },
+  "doom": {
+    "company": "id Software"
+  },
+  "street-fighter-ii": {
+    "company": "Capcom"
+  },
+  "pokemon-red-and-blue": {
+    "year": 1996,
+    "aliases": [
+      "Pokémon Red Version and Pokémon Blue Version",
+      "Pokemon Red & Blue"
+    ]
+  },
+  "counter-strike": {
+    "aliases": [
+      "Counter-Strike 1.6",
+      "CS 1.6",
+      "Counter Strike 1.6"
+    ]
+  },
+  "_add": [
+    {
+      "name": "Cricket 07",
+      "year": 2006,
+      "franchise": "EA Sports Cricket",
+      "company": "Electronic Arts",
+      "aliases": [
+        "EA Cricket 07",
+        "EA Sports Cricket 07"
+      ]
+    },
+    {
+      "name": "FreeCell",
+      "year": 1978,
+      "company": "Paul Alfille",
+      "franchise": "Solitaire",
+      "aliases": [
+        "Microsoft FreeCell"
+      ]
+    },
+    {
+      "name": "Microsoft Solitaire",
+      "year": 1990,
+      "company": "Microsoft",
+      "franchise": "Solitaire",
+      "aliases": [
+        "Solitaire",
+        "Windows Solitaire"
+      ]
+    }
+  ]
+}

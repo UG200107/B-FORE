@@ -1,0 +1,10 @@
+[
+  {"type":"The International"},
+  {"type":"League of Legends World Championship"},
+  {"type":"Evo","startsWith":true},
+  {"type":"Fortnite World Cup"},
+  {"type":"Overwatch League"},
+  {"type":"DreamHack"},
+  {"type":"Intel Extreme Masters"},
+  {"type":"Valorant Champions"}
+]

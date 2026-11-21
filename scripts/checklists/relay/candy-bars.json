@@ -1,0 +1,14 @@
+[
+  {"type":"Snickers"},
+  {"type":"Kit Kat"},
+  {"type":"Twix"},
+  {"type":"Mars bar","startsWith":true},
+  {"type":"Toblerone"},
+  {"type":"Cadbury Dairy Milk"},
+  {"type":"Ferrero Rocher"},
+  {"type":"Milky Way"},
+  {"type":"Skittles"},
+  {"type":"M&M's"},
+  {"type":"Reese's Peanut Butter Cups"},
+  {"type":"Pocky"}
+]

@@ -1,0 +1,27 @@
+{
+  "_comment": "Curated. add: [name, year, maker?, aliases?].",
+  "add": [
+    ["Google Chrome",2008,"Google",["Chrome"]],
+    ["Mozilla Firefox",2004,"Mozilla",["Firefox"]],
+    ["Safari",2003,"Apple"],
+    ["Internet Explorer",1995,"Microsoft",["IE"]],
+    ["Microsoft Edge",2015,"Microsoft",["Edge"]],
+    ["Opera",1995,"Opera Software"],
+    ["Netscape Navigator",1994,"Netscape",["Netscape"]],
+    ["Mosaic",1993,"NCSA",["NCSA Mosaic"]],
+    ["Brave",2016,"Brave Software"],
+    ["Vivaldi",2016,"Vivaldi Technologies"],
+    ["Lynx",1992,"University of Kansas"],
+    ["WorldWideWeb",1990,"Tim Berners-Lee",["Nexus"]],
+    ["Samsung Internet",2012,"Samsung"],
+    ["UC Browser",2004,"UCWeb"],
+    ["Tor Browser",2008,"Tor Project"],
+    ["Arc",2022,"The Browser Company"],
+    ["Chromium",2008,"Google"],
+    ["Konqueror",2000,"KDE"],
+    ["SeaMonkey",2006,"SeaMonkey Council"],
+    ["Opera Mini",2005,"Opera Software"],
+    ["Camino",2002,"Mozilla"],
+    ["Yandex Browser",2012,"Yandex"]
+  ]
+}

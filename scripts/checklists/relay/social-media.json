@@ -1,0 +1,14 @@
+[
+  {"type":"Facebook"},
+  {"type":"Instagram"},
+  {"type":"TikTok"},
+  {"type":"Twitter","startsWith":true},
+  {"type":"YouTube"},
+  {"type":"Snapchat"},
+  {"type":"Reddit"},
+  {"type":"LinkedIn"},
+  {"type":"MySpace"},
+  {"type":"WhatsApp"},
+  {"type":"Pinterest"},
+  {"type":"Tumblr"}
+]

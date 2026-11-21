@@ -1,0 +1,14 @@
+[
+  {"type":"United Nations"},
+  {"type":"NATO"},
+  {"type":"European Union"},
+  {"type":"World Health Organization"},
+  {"type":"UNESCO"},
+  {"type":"Red Cross","expect":"International Committee of the Red Cross"},
+  {"type":"FIFA"},
+  {"type":"International Monetary Fund"},
+  {"type":"World Bank"},
+  {"type":"Greenpeace"},
+  {"type":"Amnesty International"},
+  {"type":"OPEC","expect":"Organization of the Petroleum Exporting Countries"}
+]

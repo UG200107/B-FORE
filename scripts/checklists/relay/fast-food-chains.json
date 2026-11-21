@@ -1,0 +1,14 @@
+[
+  {"type":"McDonald's"},
+  {"type":"Burger King"},
+  {"type":"KFC"},
+  {"type":"Subway"},
+  {"type":"Taco Bell"},
+  {"type":"Wendy's"},
+  {"type":"Pizza Hut"},
+  {"type":"Domino's","startsWith":true},
+  {"type":"Starbucks"},
+  {"type":"Chick-fil-A"},
+  {"type":"Five Guys"},
+  {"type":"Dunkin'","startsWith":true}
+]

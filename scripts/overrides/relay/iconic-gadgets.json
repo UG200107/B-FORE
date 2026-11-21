@@ -1,0 +1,304 @@
+{
+  "_comment": "Curated. add: [name, year, maker?, aliases?]. Years = first release.",
+  "sega-mega-drive": {
+    "aliases": [
+      "Sega Genesis",
+      "Genesis"
+    ]
+  },
+  "add": [
+    [
+      "iPhone",
+      2007,
+      "Apple",
+      [
+        "Apple iPhone"
+      ]
+    ],
+    [
+      "iPod",
+      2001,
+      "Apple",
+      [
+        "Apple iPod"
+      ]
+    ],
+    [
+      "iPad",
+      2010,
+      "Apple",
+      [
+        "Apple iPad"
+      ]
+    ],
+    [
+      "Walkman",
+      1979,
+      "Sony",
+      [
+        "Sony Walkman"
+      ]
+    ],
+    [
+      "Game Boy",
+      1989,
+      "Nintendo",
+      [
+        "Gameboy"
+      ]
+    ],
+    [
+      "Nokia 3310",
+      2000,
+      "Nokia"
+    ],
+    [
+      "Motorola Razr",
+      2004,
+      "Motorola",
+      [
+        "Razr",
+        "RAZR V3"
+      ]
+    ],
+    [
+      "Motorola DynaTAC 8000X",
+      1983,
+      "Motorola",
+      [
+        "DynaTAC",
+        "Motorola DynaTAC"
+      ]
+    ],
+    [
+      "BlackBerry",
+      1999,
+      "Research In Motion"
+    ],
+    [
+      "Kindle",
+      2007,
+      "Amazon",
+      [
+        "Amazon Kindle"
+      ]
+    ],
+    [
+      "Apple Watch",
+      2015,
+      "Apple"
+    ],
+    [
+      "AirPods",
+      2016,
+      "Apple",
+      [
+        "Air Pods"
+      ]
+    ],
+    [
+      "GoPro",
+      2004,
+      "GoPro",
+      [
+        "Go Pro"
+      ]
+    ],
+    [
+      "Palm Pilot",
+      1996,
+      "Palm",
+      [
+        "PalmPilot"
+      ]
+    ],
+    [
+      "Discman",
+      1984,
+      "Sony",
+      [
+        "Sony Discman",
+        "Sony D-50"
+      ]
+    ],
+    [
+      "Macintosh",
+      1984,
+      "Apple",
+      [
+        "Mac",
+        "Apple Macintosh",
+        "Macintosh 128K"
+      ]
+    ],
+    [
+      "IBM PC",
+      1981,
+      "IBM",
+      [
+        "IBM Personal Computer"
+      ]
+    ],
+    [
+      "Apple II",
+      1977,
+      "Apple",
+      [
+        "Apple 2"
+      ]
+    ],
+    [
+      "Commodore 64",
+      1982,
+      "Commodore",
+      [
+        "C64"
+      ]
+    ],
+    [
+      "Tamagotchi",
+      1996,
+      "Bandai"
+    ],
+    [
+      "Polaroid SX-70",
+      1972,
+      "Polaroid",
+      [
+        "SX-70",
+        "Polaroid camera"
+      ]
+    ],
+    [
+      "Kodak Brownie",
+      1900,
+      "Kodak",
+      [
+        "Brownie camera"
+      ]
+    ],
+    [
+      "Casio F-91W",
+      1989,
+      "Casio",
+      [
+        "F-91W",
+        "F91W"
+      ]
+    ],
+    [
+      "TI-83",
+      1996,
+      "Texas Instruments",
+      [
+        "TI 83"
+      ]
+    ],
+    [
+      "HP-35",
+      1972,
+      "Hewlett-Packard",
+      [
+        "HP 35"
+      ]
+    ],
+    [
+      "Fitbit",
+      2009,
+      "Fitbit"
+    ],
+    [
+      "Amazon Echo",
+      2014,
+      "Amazon",
+      [
+        "Echo"
+      ]
+    ],
+    [
+      "Google Glass",
+      2013,
+      "Google"
+    ],
+    [
+      "Oculus Rift",
+      2016,
+      "Oculus",
+      [
+        "Rift"
+      ]
+    ],
+    [
+      "Segway",
+      2001,
+      "Segway",
+      [
+        "Segway PT"
+      ]
+    ],
+    [
+      "Zune",
+      2006,
+      "Microsoft"
+    ],
+    [
+      "Chromecast",
+      2013,
+      "Google"
+    ],
+    [
+      "Raspberry Pi",
+      2012,
+      "Raspberry Pi Foundation"
+    ],
+    [
+      "Microsoft Surface",
+      2012,
+      "Microsoft",
+      [
+        "Surface"
+      ]
+    ],
+    [
+      "Apple Vision Pro",
+      2024,
+      "Apple",
+      [
+        "Vision Pro"
+      ]
+    ],
+    [
+      "Pebble",
+      2013,
+      "Pebble",
+      [
+        "Pebble watch"
+      ]
+    ],
+    [
+      "Nintendo Game & Watch",
+      1980,
+      "Nintendo",
+      [
+        "Game and Watch",
+        "Game & Watch"
+      ]
+    ],
+    [
+      "Sony Trinitron",
+      1968,
+      "Sony",
+      [
+        "Trinitron"
+      ]
+    ],
+    [
+      "Regency TR-1",
+      1954,
+      "Regency",
+      [
+        "TR-1"
+      ]
+    ]
+  ]
+}

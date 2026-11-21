@@ -1,0 +1,6 @@
+{
+  "_comment": "Hand fixes for music albums (scripts/fetch-music.mjs). \"_add\" lists albums the source misses; always kept.",
+  "_add": [
+    { "name": "...Baby One More Time", "year": 1999, "franchise": "Britney Spears", "company": "Jive", "aliases": ["Baby One More Time"] }
+  ]
+}

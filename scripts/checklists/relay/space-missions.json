@@ -1,0 +1,14 @@
+[
+  {"type":"Apollo 11"},
+  {"type":"Sputnik 1"},
+  {"type":"Voyager 1"},
+  {"type":"Hubble Space Telescope"},
+  {"type":"International Space Station"},
+  {"type":"James Webb Space Telescope"},
+  {"type":"Vostok 1"},
+  {"type":"Apollo 13"},
+  {"type":"Curiosity","startsWith":true},
+  {"type":"Rosetta"},
+  {"type":"Cassini–Huygens"},
+  {"type":"Mir","startsWith":true}
+]

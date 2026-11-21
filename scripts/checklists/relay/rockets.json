@@ -1,0 +1,14 @@
+[
+  {"type":"Saturn V"},
+  {"type":"Falcon 9"},
+  {"type":"Falcon Heavy"},
+  {"type":"Space Shuttle","startsWith":true},
+  {"type":"V-2"},
+  {"type":"Soyuz","startsWith":true},
+  {"type":"Ariane 5","startsWith":true},
+  {"type":"Starship","startsWith":true},
+  {"type":"Atlas V","startsWith":true},
+  {"type":"Long March 5","startsWith":true},
+  {"type":"Space Launch System"},
+  {"type":"Proton","startsWith":true}
+]

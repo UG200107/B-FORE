@@ -1,0 +1,14 @@
+{
+  "_comment": "Curated. add: [name, year, painter?, aliases?]. Murals and frescoes that Wikidata does not type as paintings.",
+  "add": [
+    [
+      "The Last Supper",
+      1498,
+      "Leonardo da Vinci",
+      [
+        "Last Supper (Leonardo)",
+        "Il Cenacolo"
+      ]
+    ]
+  ]
+}

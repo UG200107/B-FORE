@@ -1,0 +1,10 @@
+[
+  {"type":"Google Chrome","expect":"Google Chrome"},
+  {"type":"Firefox","expect":"Mozilla Firefox","startsWith":true},
+  {"type":"Safari","startsWith":true},
+  {"type":"Internet Explorer"},
+  {"type":"Opera"},
+  {"type":"Netscape Navigator"},
+  {"type":"Microsoft Edge"},
+  {"type":"Mosaic","startsWith":true}
+]

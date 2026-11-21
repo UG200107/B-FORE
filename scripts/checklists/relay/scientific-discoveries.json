@@ -1,0 +1,14 @@
+[
+  {"type":"Gravity","expect":"Universal gravitation"},
+  {"type":"Theory of relativity","expect":"Special relativity"},
+  {"type":"Evolution","startsWith":true},
+  {"type":"DNA","startsWith":true},
+  {"type":"Penicillin","startsWith":true},
+  {"type":"Periodic table"},
+  {"type":"Heliocentrism"},
+  {"type":"Electron","startsWith":true},
+  {"type":"Big Bang","startsWith":true},
+  {"type":"Higgs boson"},
+  {"type":"Radioactivity"},
+  {"type":"Plate tectonics","expect":"Continental drift"}
+]

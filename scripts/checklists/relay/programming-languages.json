@@ -1,0 +1,14 @@
+[
+  {"type":"Python"},
+  {"type":"JavaScript"},
+  {"type":"Java"},
+  {"type":"C"},
+  {"type":"C++"},
+  {"type":"Rust"},
+  {"type":"Go","startsWith":true},
+  {"type":"Fortran"},
+  {"type":"COBOL"},
+  {"type":"Swift"},
+  {"type":"Ruby"},
+  {"type":"PHP"}
+]

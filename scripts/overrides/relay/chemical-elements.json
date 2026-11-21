@@ -1,0 +1,18 @@
+{
+  "_comment": "Elements known since antiquity have no discovery date on Wikidata. Years follow Wikipedia's 'Timeline of chemical element discoveries' (first known use; negative = BCE). add: [name, year, discoverer?, aliases?]",
+  "add": [
+    ["Copper", -9000, "Prehistoric", ["Cu"]],
+    ["Lead", -7000, "Prehistoric", ["Pb"]],
+    ["Gold", -6000, "Prehistoric", ["Au"]],
+    ["Silver", -5000, "Prehistoric", ["Ag"]],
+    ["Iron", -5000, "Prehistoric", ["Fe"]],
+    ["Carbon", -3750, "Prehistoric", ["C"]],
+    ["Tin", -3500, "Prehistoric", ["Sn"]],
+    ["Antimony", -3000, "Prehistoric", ["Sb"]],
+    ["Sulfur", -2000, "Prehistoric", ["S", "Sulphur"]],
+    ["Mercury", -2000, "Prehistoric", ["Hg", "Quicksilver"]],
+    ["Zinc", -1000, "Prehistoric", ["Zn"]],
+    ["Arsenic", 1250, "Albertus Magnus", ["As"]],
+    ["Bismuth", 1500, "Unknown", ["Bi"]]
+  ]
+}

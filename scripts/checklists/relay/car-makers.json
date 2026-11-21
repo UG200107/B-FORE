@@ -1,0 +1,14 @@
+[
+  {"type":"Ford","startsWith":true},
+  {"type":"Toyota","startsWith":true},
+  {"type":"Volkswagen","startsWith":true},
+  {"type":"Ferrari","startsWith":true},
+  {"type":"BMW","startsWith":true},
+  {"type":"Mercedes-Benz","startsWith":true},
+  {"type":"Tesla","startsWith":true},
+  {"type":"Honda","startsWith":true},
+  {"type":"Porsche","startsWith":true},
+  {"type":"Fiat","startsWith":true},
+  {"type":"Lamborghini","startsWith":true},
+  {"type":"Rolls-Royce","startsWith":true}
+]

@@ -1,0 +1,12 @@
+[
+  {"type":"Karate"},
+  {"type":"Judo"},
+  {"type":"Taekwondo"},
+  {"type":"Brazilian jiu-jitsu"},
+  {"type":"Aikido"},
+  {"type":"Jeet Kune Do"},
+  {"type":"Boxing","startsWith":true},
+  {"type":"Mixed martial arts"},
+  {"type":"Sambo"},
+  {"type":"Kickboxing"}
+]

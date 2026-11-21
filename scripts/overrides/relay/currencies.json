@@ -1,0 +1,8 @@
+{
+  "_comment": "Curated. add: [name, year, maker?, aliases?].",
+  "yen": {"aliases":["Japanese yen","JPY"]},
+  "add": [
+    ["Bitcoin",2009,"Satoshi Nakamoto"],
+    ["Indian rupee",1540,"India",["Rupee"]]
+  ]
+}

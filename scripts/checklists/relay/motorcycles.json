@@ -1,0 +1,12 @@
+[
+  {"type":"Harley-Davidson","startsWith":true},
+  {"type":"Vespa","startsWith":true},
+  {"type":"Honda Super Cub"},
+  {"type":"Ducati Monster","startsWith":true},
+  {"type":"Triumph Bonneville","startsWith":true},
+  {"type":"Kawasaki Ninja","startsWith":true},
+  {"type":"Yamaha YZF-R1"},
+  {"type":"Royal Enfield Bullet","startsWith":true},
+  {"type":"BMW R 32"},
+  {"type":"Indian Scout","startsWith":true}
+]

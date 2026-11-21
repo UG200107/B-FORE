@@ -1,0 +1,42 @@
+{
+  "anime": {
+    "count": 11198,
+    "minYear": 1917,
+    "maxYear": 2025
+  },
+  "books": {
+    "count": 20000,
+    "minYear": -2599,
+    "maxYear": 2025
+  },
+  "cars": {
+    "count": 2007,
+    "minYear": 1886,
+    "maxYear": 2025
+  },
+  "movies": {
+    "count": 20000,
+    "minYear": 1889,
+    "maxYear": 2025
+  },
+  "music": {
+    "count": 20000,
+    "minYear": 1939,
+    "maxYear": 2025
+  },
+  "songs": {
+    "count": 20000,
+    "minYear": 1500,
+    "maxYear": 2025
+  },
+  "tv-shows": {
+    "count": 20000,
+    "minYear": 1928,
+    "maxYear": 2025
+  },
+  "video-games": {
+    "count": 20000,
+    "minYear": 1958,
+    "maxYear": 2025
+  }
+}

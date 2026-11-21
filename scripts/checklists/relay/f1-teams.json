@@ -1,0 +1,12 @@
+[
+  {"type":"Ferrari","expect":"Scuderia Ferrari"},
+  {"type":"McLaren"},
+  {"type":"Williams"},
+  {"type":"Red Bull Racing"},
+  {"type":"Mercedes","expect":"Mercedes-AMG Petronas","startsWith":true},
+  {"type":"Lotus","expect":"Team Lotus","startsWith":true},
+  {"type":"Brabham"},
+  {"type":"Tyrrell","expect":"Tyrrell Racing"},
+  {"type":"Brawn GP"},
+  {"type":"Jordan Grand Prix"}
+]

@@ -1,0 +1,10 @@
+[
+  {"type":"Mona Lisa"},
+  {"type":"The Starry Night"},
+  {"type":"The Last Supper","startsWith":true},
+  {"type":"The Scream","startsWith":true},
+  {"type":"Guernica"},
+  {"type":"Girl with a Pearl Earring"},
+  {"type":"The Birth of Venus"},
+  {"type":"The Night Watch"}
+]

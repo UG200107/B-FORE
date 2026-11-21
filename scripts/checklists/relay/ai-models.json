@@ -1,0 +1,14 @@
+[
+  {"type":"ChatGPT"},
+  {"type":"GPT-4"},
+  {"type":"Claude"},
+  {"type":"Gemini"},
+  {"type":"Siri"},
+  {"type":"Alexa"},
+  {"type":"AlphaGo"},
+  {"type":"DALL-E"},
+  {"type":"Midjourney"},
+  {"type":"Watson","expect":"IBM Watson"},
+  {"type":"ELIZA"},
+  {"type":"Deep Blue"}
+]

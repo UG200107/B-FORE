@@ -1,0 +1,14 @@
+[
+  {"type":"Nintendo","startsWith":true},
+  {"type":"Rockstar Games","startsWith":true},
+  {"type":"Valve","startsWith":true},
+  {"type":"Blizzard Entertainment"},
+  {"type":"Ubisoft","startsWith":true},
+  {"type":"Electronic Arts","startsWith":true},
+  {"type":"Naughty Dog"},
+  {"type":"CD Projekt","startsWith":true},
+  {"type":"FromSoftware","startsWith":true},
+  {"type":"Bethesda Softworks","startsWith":true},
+  {"type":"Mojang","startsWith":true},
+  {"type":"Epic Games","startsWith":true}
+]

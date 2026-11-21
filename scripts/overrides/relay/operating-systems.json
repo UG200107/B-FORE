@@ -1,0 +1,32 @@
+{
+  "_comment": "Curated. add: [name, year, maker?, aliases?].",
+  "add": [
+    ["Unix",1969,"Bell Labs"],
+    ["Linux",1991,"Linus Torvalds"],
+    ["Microsoft Windows",1985,"Microsoft",["Windows"]],
+    ["macOS",2001,"Apple",["Mac OS X","OS X"]],
+    ["Classic Mac OS",1984,"Apple",["Mac OS","System 1"]],
+    ["MS-DOS",1981,"Microsoft",["DOS"]],
+    ["Android",2008,"Google"],
+    ["iOS",2007,"Apple",["iPhone OS"]],
+    ["Ubuntu",2004,"Canonical"],
+    ["Debian",1993,"Debian Project"],
+    ["Red Hat Linux",1995,"Red Hat"],
+    ["Fedora",2003,"Red Hat"],
+    ["ChromeOS",2011,"Google",["Chrome OS"]],
+    ["FreeBSD",1993,"FreeBSD Project"],
+    ["OS/2",1987,"IBM"],
+    ["AmigaOS",1985,"Commodore"],
+    ["BeOS",1995,"Be Inc."],
+    ["Solaris",1992,"Sun Microsystems"],
+    ["CP/M",1974,"Digital Research"],
+    ["BlackBerry OS",1999,"BlackBerry"],
+    ["Palm OS",1996,"Palm"],
+    ["Windows Phone",2010,"Microsoft"],
+    ["HarmonyOS",2019,"Huawei"],
+    ["Windows 95",1995,"Microsoft"],
+    ["Windows XP",2001,"Microsoft"],
+    ["Windows 10",2015,"Microsoft"],
+    ["watchOS",2015,"Apple"]
+  ]
+}

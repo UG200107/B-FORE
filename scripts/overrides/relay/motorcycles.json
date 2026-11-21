@@ -1,0 +1,30 @@
+{
+  "_comment": "Curated. add: [name, year, maker?, aliases?].",
+  "add": [
+    ["Harley-Davidson",1903,"Harley-Davidson",["Harley"]],
+    ["Vespa",1946,"Piaggio"],
+    ["Honda Super Cub",1958,"Honda",["Super Cub"]],
+    ["Ducati Monster",1993,"Ducati"],
+    ["Triumph Bonneville",1959,"Triumph"],
+    ["Kawasaki Ninja",1984,"Kawasaki",["Ninja"]],
+    ["Yamaha YZF-R1",1998,"Yamaha",["R1"]],
+    ["Royal Enfield Bullet",1932,"Royal Enfield"],
+    ["BMW R 32",1923,"BMW"],
+    ["Indian Scout",1920,"Indian"],
+    ["Lambretta",1947,"Innocenti"],
+    ["Honda CB750",1969,"Honda"],
+    ["Harley-Davidson Sportster",1957,"Harley-Davidson",["Sportster"]],
+    ["Harley-Davidson Electra Glide",1965,"Harley-Davidson",["Electra Glide"]],
+    ["Suzuki Hayabusa",1999,"Suzuki",["Hayabusa"]],
+    ["Ducati 916",1994,"Ducati"],
+    ["Honda Gold Wing",1975,"Honda",["Gold Wing"]],
+    ["Brough Superior SS100",1924,"Brough Superior"],
+    ["Kawasaki Z1",1972,"Kawasaki"],
+    ["Norton Commando",1967,"Norton"],
+    ["Triumph Speed Twin",1938,"Triumph"],
+    ["Moto Guzzi V7",1967,"Moto Guzzi"],
+    ["Hildebrand & Wolfmüller",1894,"Hildebrand & Wolfmüller"],
+    ["Bajaj Pulsar",2001,"Bajaj"],
+    ["Hero Splendor",1994,"Hero"]
+  ]
+}

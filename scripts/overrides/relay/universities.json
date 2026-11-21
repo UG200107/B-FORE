@@ -1,0 +1,10 @@
+{
+  "_comment": "Curated. add: [name, year, country?, aliases?]. Keys = item ids for alias fixes.",
+  "add": [],
+  "sorbonne-university": {
+    "aliases": [
+      "Sorbonne",
+      "La Sorbonne"
+    ]
+  }
+}

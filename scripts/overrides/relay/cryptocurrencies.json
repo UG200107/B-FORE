@@ -1,0 +1,26 @@
+{
+  "_comment": "Curated. add: [name, year, maker?, aliases?].",
+  "add": [
+    ["Bitcoin",2009,"Satoshi Nakamoto",["BTC"]],
+    ["Ethereum",2015,"Vitalik Buterin",["Ether","ETH"]],
+    ["Dogecoin",2013,"Billy Markus",["DOGE"]],
+    ["Tether",2014,"Tether Limited",["USDT"]],
+    ["Litecoin",2011,"Charlie Lee",["LTC"]],
+    ["Solana",2020,"Anatoly Yakovenko",["SOL"]],
+    ["Cardano",2017,"Charles Hoskinson",["ADA"]],
+    ["XRP",2012,"Ripple Labs",["Ripple"]],
+    ["Monero",2014,"Monero Project",["XMR"]],
+    ["BNB",2017,"Binance",["Binance Coin"]],
+    ["USD Coin",2018,"Circle",["USDC"]],
+    ["Shiba Inu",2020,"Ryoshi",["SHIB"]],
+    ["Polkadot",2020,"Gavin Wood",["DOT"]],
+    ["Bitcoin Cash",2017,"Bitcoin community",["BCH"]],
+    ["Namecoin",2011,"Namecoin"],
+    ["Ethereum Classic",2016,"Ethereum community"],
+    ["Chainlink",2017,"Sergey Nazarov",["LINK"]],
+    ["Tron",2017,"Justin Sun",["TRX"]],
+    ["Stellar",2014,"Jed McCaleb",["XLM"]],
+    ["Zcash",2016,"Zooko Wilcox"],
+    ["Dash",2014,"Evan Duffield"]
+  ]
+}

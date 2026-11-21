@@ -1,0 +1,6 @@
+{
+  "_comment": "Curated. add: [name, year, maker?, aliases?].",
+  "add": [
+    ["Heavy metal",1968,"United Kingdom",["Metal"]]
+  ]
+}

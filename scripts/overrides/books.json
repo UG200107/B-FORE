@@ -1,0 +1,160 @@
+{
+  "_comment": "Hand fixes for books, applied by scripts/fetch-books.mjs. Keys are generated item ids: any TopicItem field can be overridden, \"aliases\" are ADDED to the generated ones, \"exclude\": true drops the item. \"_add\" lists books the sources miss (e.g. no date on Wikidata); they are always kept. node scripts/verify-books.mjs suggests entries for any checklist failure.",
+  "_add": [
+    {
+      "name": "Odyssey",
+      "year": -725,
+      "franchise": "Homeric epics",
+      "company": "Homer",
+      "aliases": [
+        "The Odyssey",
+        "Homer's Odyssey"
+      ],
+      "_note": "Wikidata has no date for the Odyssey; conventionally composed late 8th century BCE, after the Iliad."
+    },
+    {
+      "name": "Torah",
+      "year": -450,
+      "company": "Anonymous",
+      "franchise": "Hebrew Bible",
+      "aliases": [
+        "Pentateuch",
+        "Five Books of Moses"
+      ]
+    },
+    {
+      "name": "Talmud",
+      "year": 500,
+      "company": "Rabbinic sages",
+      "franchise": "Talmud",
+      "aliases": [
+        "Babylonian Talmud"
+      ]
+    },
+    {
+      "name": "One Thousand and One Nights",
+      "year": 850,
+      "company": "Anonymous",
+      "franchise": "One Thousand and One Nights",
+      "aliases": [
+        "Arabian Nights",
+        "1001 Nights",
+        "The Arabian Nights"
+      ]
+    },
+    {
+      "name": "Upanishads",
+      "year": -700,
+      "company": "Anonymous",
+      "franchise": "Vedas",
+      "aliases": [
+        "The Upanishads"
+      ]
+    },
+    {
+      "name": "Bhagavad Gita",
+      "year": -200,
+      "company": "Vyasa",
+      "franchise": "Mahabharata",
+      "aliases": [
+        "Gita",
+        "The Bhagavad Gita"
+      ]
+    },
+    {
+      "name": "Ramayana",
+      "year": -500,
+      "company": "Valmiki",
+      "franchise": "Ramayana",
+      "aliases": [
+        "The Ramayana"
+      ]
+    },
+    {
+      "name": "Aesop's Fables",
+      "year": -560,
+      "company": "Aesop",
+      "franchise": "Aesop's Fables",
+      "aliases": [
+        "Aesops Fables",
+        "Aesop"
+      ]
+    },
+    {
+      "name": "Old Testament",
+      "year": -450,
+      "company": "Anonymous",
+      "franchise": "Bible",
+      "aliases": [
+        "The Old Testament"
+      ]
+    },
+    {
+      "name": "Book of Exodus",
+      "year": -500,
+      "company": "Anonymous",
+      "franchise": "Bible",
+      "aliases": [
+        "Exodus (Bible)"
+      ]
+    },
+    {
+      "name": "Book of Leviticus",
+      "year": -500,
+      "company": "Anonymous",
+      "franchise": "Bible",
+      "aliases": [
+        "Leviticus"
+      ]
+    },
+    {
+      "name": "Book of Revelation",
+      "year": 95,
+      "company": "John of Patmos",
+      "franchise": "Bible",
+      "aliases": [
+        "Revelation",
+        "Apocalypse of John"
+      ]
+    },
+    {
+      "name": "Book of Ruth",
+      "year": -450,
+      "company": "Anonymous",
+      "franchise": "Bible",
+      "aliases": [
+        "Ruth"
+      ]
+    },
+    {
+      "name": "Book of Esther",
+      "year": -400,
+      "company": "Anonymous",
+      "franchise": "Bible",
+      "aliases": [
+        "Esther"
+      ]
+    },
+    {
+      "name": "Book of Proverbs",
+      "year": -500,
+      "company": "Solomon (attributed)",
+      "franchise": "Bible",
+      "aliases": [
+        "Proverbs"
+      ]
+    },
+    {
+      "name": "Hippocratic Oath",
+      "year": -400,
+      "company": "Hippocrates (attributed)",
+      "franchise": "Hippocratic Corpus"
+    }
+  ],
+  "mahabharata": {
+    "year": -400
+  },
+  "the-tale-of-the-heike": {
+    "year": 1330
+  }
+}

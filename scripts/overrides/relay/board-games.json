@@ -1,0 +1,7 @@
+{
+  "_comment": "Curated. add: [name, year, designer?, aliases?]. Keys = item ids for corrections.",
+  "hounds-and-jackals": {"year":-2000},
+  "add": [
+    ["Cluedo",1949,"Waddingtons",["Clue"]]
+  ]
+}

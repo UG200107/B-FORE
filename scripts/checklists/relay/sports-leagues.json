@@ -1,0 +1,14 @@
+[
+  {"type":"National Football League"},
+  {"type":"NBA","expect":"National Basketball Association"},
+  {"type":"Premier League"},
+  {"type":"Major League Baseball"},
+  {"type":"UEFA Champions League"},
+  {"type":"La Liga"},
+  {"type":"Formula One","expect":"Formula One World Championship"},
+  {"type":"Indian Premier League"},
+  {"type":"National Hockey League"},
+  {"type":"Bundesliga"},
+  {"type":"Serie A"},
+  {"type":"FIFA World Cup"}
+]

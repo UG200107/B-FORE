@@ -1,0 +1,284 @@
+{
+  "_comment": "Applied on top of Wikidata. add: [name, year, maker?, aliases?] are always included (curated year wins); aliases: extra spellings per name.",
+  "sega-mega-drive": {
+    "aliases": [
+      "Sega Genesis",
+      "Genesis"
+    ]
+  },
+  "add": [
+    [
+      "PlayStation",
+      1994,
+      "Sony",
+      [
+        "PS1",
+        "PSX",
+        "PS One"
+      ]
+    ],
+    [
+      "PlayStation 2",
+      2000,
+      "Sony",
+      [
+        "PS2"
+      ]
+    ],
+    [
+      "PlayStation 3",
+      2006,
+      "Sony",
+      [
+        "PS3"
+      ]
+    ],
+    [
+      "PlayStation 4",
+      2013,
+      "Sony",
+      [
+        "PS4"
+      ]
+    ],
+    [
+      "PlayStation 5",
+      2020,
+      "Sony",
+      [
+        "PS5"
+      ]
+    ],
+    [
+      "PlayStation Portable",
+      2004,
+      "Sony",
+      [
+        "PSP"
+      ]
+    ],
+    [
+      "PlayStation Vita",
+      2011,
+      "Sony",
+      [
+        "PS Vita",
+        "Vita"
+      ]
+    ],
+    [
+      "Xbox",
+      2001,
+      "Microsoft",
+      [
+        "Original Xbox"
+      ]
+    ],
+    [
+      "Xbox 360",
+      2005,
+      "Microsoft",
+      [
+        "360"
+      ]
+    ],
+    [
+      "Xbox One",
+      2013,
+      "Microsoft"
+    ],
+    [
+      "Xbox Series X and Series S",
+      2020,
+      "Microsoft",
+      [
+        "Xbox Series X",
+        "Xbox Series S",
+        "Series X"
+      ]
+    ],
+    [
+      "Nintendo Entertainment System",
+      1983,
+      "Nintendo",
+      [
+        "NES",
+        "Famicom"
+      ]
+    ],
+    [
+      "Super Nintendo Entertainment System",
+      1990,
+      "Nintendo",
+      [
+        "SNES",
+        "Super Nintendo",
+        "Super Famicom"
+      ]
+    ],
+    [
+      "Nintendo 64",
+      1996,
+      "Nintendo",
+      [
+        "N64"
+      ]
+    ],
+    [
+      "GameCube",
+      2001,
+      "Nintendo",
+      [
+        "Nintendo GameCube",
+        "NGC"
+      ]
+    ],
+    [
+      "Wii",
+      2006,
+      "Nintendo",
+      [
+        "Nintendo Wii"
+      ]
+    ],
+    [
+      "Wii U",
+      2012,
+      "Nintendo"
+    ],
+    [
+      "Nintendo Switch",
+      2017,
+      "Nintendo",
+      [
+        "Switch"
+      ]
+    ],
+    [
+      "Nintendo Switch 2",
+      2025,
+      "Nintendo",
+      [
+        "Switch 2"
+      ]
+    ],
+    [
+      "Game Boy",
+      1989,
+      "Nintendo",
+      [
+        "Gameboy"
+      ]
+    ],
+    [
+      "Game Boy Color",
+      1998,
+      "Nintendo",
+      [
+        "GBC"
+      ]
+    ],
+    [
+      "Game Boy Advance",
+      2001,
+      "Nintendo",
+      [
+        "GBA"
+      ]
+    ],
+    [
+      "Nintendo DS",
+      2004,
+      "Nintendo",
+      [
+        "DS"
+      ]
+    ],
+    [
+      "Nintendo 3DS",
+      2011,
+      "Nintendo",
+      [
+        "3DS"
+      ]
+    ],
+    [
+      "Atari 2600",
+      1977,
+      "Atari",
+      [
+        "Atari VCS"
+      ]
+    ],
+    [
+      "Magnavox Odyssey",
+      1972,
+      "Magnavox",
+      [
+        "Odyssey"
+      ]
+    ],
+    [
+      "Sega Master System",
+      1985,
+      "Sega",
+      [
+        "Master System"
+      ]
+    ],
+    [
+      "Sega Mega Drive",
+      1988,
+      "Sega",
+      [
+        "Sega Genesis",
+        "Genesis",
+        "Mega Drive"
+      ]
+    ],
+    [
+      "Sega Saturn",
+      1994,
+      "Sega",
+      [
+        "Saturn"
+      ]
+    ],
+    [
+      "Dreamcast",
+      1998,
+      "Sega",
+      [
+        "Sega Dreamcast"
+      ]
+    ],
+    [
+      "Game Gear",
+      1990,
+      "Sega",
+      [
+        "Sega Game Gear"
+      ]
+    ],
+    [
+      "Neo Geo",
+      1990,
+      "SNK"
+    ],
+    [
+      "Steam Deck",
+      2022,
+      "Valve"
+    ],
+    [
+      "ColecoVision",
+      1982,
+      "Coleco"
+    ],
+    [
+      "Intellivision",
+      1979,
+      "Mattel"
+    ]
+  ]
+}

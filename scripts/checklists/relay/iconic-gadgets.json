@@ -1,0 +1,18 @@
+[
+  {"type":"PlayStation 5"},
+  {"type":"PS5","expect":"PlayStation 5"},
+  {"type":"iPhone"},
+  {"type":"iPad"},
+  {"type":"Walkman"},
+  {"type":"Nokia 3310"},
+  {"type":"BlackBerry"},
+  {"type":"Kindle"},
+  {"type":"Apple Watch"},
+  {"type":"AirPods"},
+  {"type":"Game Boy"},
+  {"type":"Nintendo Switch"},
+  {"type":"Xbox One"},
+  {"type":"Samsung Galaxy S","expect":"Samsung Galaxy S","startsWith":true},
+  {"type":"Google Pixel","expect":"Pixel","startsWith":true},
+  {"type":"iPod"}
+]

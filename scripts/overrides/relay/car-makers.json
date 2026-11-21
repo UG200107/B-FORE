@@ -1,0 +1,9 @@
+{
+  "_comment": "Curated. add: [name, year, maker?, aliases?].",
+  "ford-motor-company": {"aliases":["Ford"]},
+  "mercedes-benz-group": {"aliases":["Mercedes-Benz","Mercedes","Daimler-Benz"]},
+  "rolls-royce-motor-cars": {"aliases":["Rolls-Royce"]},
+  "add": [
+    ["Tesla",2003,"United States",["Tesla Motors","Tesla, Inc."]]
+  ]
+}

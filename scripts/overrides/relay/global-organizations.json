@@ -1,0 +1,29 @@
+{
+  "_comment": "Curated. add: [name, year, maker?, aliases?].",
+  "add": [
+    ["European Union",1993,"Brussels",["EU"]],
+    ["International Committee of the Red Cross",1863,"Geneva",["Red Cross","ICRC"]],
+    ["FIFA",1904,"Zürich"],
+    ["International Monetary Fund",1944,"Washington, D.C.",["IMF"]],
+    ["World Bank",1944,"Washington, D.C."],
+    ["International Olympic Committee",1894,"Lausanne",["IOC"]],
+    ["Greenpeace",1971,"Amsterdam"],
+    ["Amnesty International",1961,"London",["Amnesty"]],
+    ["UNICEF",1946,"New York"],
+    ["World Wide Fund for Nature",1961,"Gland",["WWF"]],
+    ["Interpol",1923,"Lyon"],
+    ["League of Nations",1920,"Geneva"],
+    ["Commonwealth of Nations",1931,"London",["Commonwealth"]],
+    ["G7",1975,"Rotating",["Group of Seven"]],
+    ["G20",1999,"Rotating",["Group of Twenty"]],
+    ["Médecins Sans Frontières",1971,"Geneva",["Doctors Without Borders","MSF"]],
+    ["Oxfam",1942,"Nairobi"],
+    ["The Salvation Army",1865,"London",["Salvation Army"]],
+    ["Scouting movement",1907,"Worldwide",["Scouts","Boy Scouts"]],
+    ["Rotary International",1905,"Evanston"],
+    ["CERN",1954,"Geneva"],
+    ["European Space Agency",1975,"Paris",["ESA"]],
+    ["Warsaw Pact",1955,"Moscow"],
+    ["OECD",1961,"Paris"]
+  ]
+}
