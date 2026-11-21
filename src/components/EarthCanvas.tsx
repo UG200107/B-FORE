@@ -367,6 +367,9 @@ const MOON_TEX = (() => {
 /** `power`: the move's points ÷ max points (0–1); sets how long and how fast the rewind spins. */
 export type SpinEvent = { key: string; power: number };
 
+/** Hand-turning the planet (the When dial): degrees to add this frame, and whether it is held. */
+export type EarthTurn = { pending: number; holding: boolean };
+
 type Props = {
   year: number;
   /** How `year` is encoded; `mya` unlocks the deep-time look. */
@@ -375,6 +378,8 @@ type Props = {
   spin?: SpinEvent | null;
   /** Changes on every paradox to trigger the time-wall flash + shudder. */
   paradoxKey?: string | null;
+  /** When set, the player turns the Earth by hand: its pending degrees are applied each frame and the idle spin stops while held. */
+  turnRef?: { current: EarthTurn };
   className?: string;
 };
 
@@ -409,7 +414,7 @@ const LAYER_CLASS = "absolute inset-0 block h-full w-full [image-rendering:pixel
  * instead of being re-sampled at a new angle every frame. Lighting, the silhouette, stars
  * and the moon live on layers that never rotate.
  */
-export function EarthCanvas({ year, timeUnit = "year", spin, paradoxKey, className }: Props) {
+export function EarthCanvas({ year, timeUnit = "year", spin, paradoxKey, turnRef, className }: Props) {
   const era = eraFor(year, timeUnit);
   const targetMix = pangaeaMix(year, timeUnit);
   const reduceMotion = useReducedMotion();
@@ -483,6 +488,12 @@ export function EarthCanvas({ year, timeUnit = "year", spin, paradoxKey, classNa
       const prog = (now - s.start) / s.duration;
       if (prog >= 1) spinRef.current = null;
       else v += (s.peak - v) * spinEnvelope(prog);
+    }
+    const hand = turnRef?.current;
+    if (hand) {
+      if (hand.holding) v = 0;
+      angle.current += hand.pending;
+      hand.pending = 0;
     }
     angle.current = (angle.current + v * dt) % 360;
     if (!reduceMotion) cloudAngle.current = (cloudAngle.current + CLOUD_DEG * dt) % 360;

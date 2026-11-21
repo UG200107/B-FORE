@@ -30,6 +30,9 @@ import { recordRound } from "@/utils/stats";
 import { EarthCanvas } from "./EarthCanvas";
 import { Game } from "./Game";
 import { ModeSwitch, type Mode } from "./ModeSwitch";
+import { WhenGame } from "./WhenGame";
+import { loadYearQuizPool } from "@/data/loadYearQuiz";
+import type { WhenPool } from "@/lib/when";
 import { ScrollStage, StagePanelOverride, type StagePanel } from "./ScrollStage";
 import { SpaceBackdrop } from "./SpaceBackdrop";
 import { StatsButton, StatsModal } from "./StatsModal";
@@ -181,6 +184,8 @@ export function App() {
     ) : (
       splash(<LoadingStatus label="Loading today's Daily Rewind" />)
     );
+  } else if (mode === "when") {
+    view = <WhenView splash={splash} headerLeft={headerLeft} headerActions={headerActions} />;
   } else if (loading) {
     view = splash(
       loading.error ? (
@@ -249,6 +254,35 @@ export function App() {
       </AnimatePresence>
     </>
   );
+}
+
+/* ---------- When: guess the year of famous things, stepping back in time ---------- */
+
+function WhenView(props: { splash: SplashFn; headerLeft: ReactNode; headerActions: ReactNode }) {
+  const [pool, setPool] = useState<{ items: WhenPool | null; error: string | null }>({ items: null, error: null });
+  const [attempt, setAttempt] = useState(0);
+  useEffect(() => {
+    let live = true;
+    loadYearQuizPool().then(
+      (items) => live && setPool({ items, error: null }),
+      (e: Error) => live && setPool({ items: null, error: e.message }),
+    );
+    return () => {
+      live = false;
+    };
+  }, [attempt]);
+  if (pool.error)
+    return props.splash(
+      <ErrorStatus
+        message={pool.error}
+        onRetry={() => {
+          setPool({ items: null, error: null });
+          setAttempt((a) => a + 1);
+        }}
+      />,
+    );
+  if (!pool.items) return props.splash(<LoadingStatus label="Loading When" />);
+  return <WhenGame pool={pool.items} headerLeft={props.headerLeft} headerActions={props.headerActions} />;
 }
 
 /* ---------- Daily Rewind: one Random Mix round per day, the same for everyone ---------- */

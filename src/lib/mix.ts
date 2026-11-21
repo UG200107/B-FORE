@@ -1,6 +1,6 @@
 import { createMatcher, type GuessMatch } from "@/utils/guessMatch";
 import type { Topic, TopicItem, TopicMeta } from "@/types/topic";
-import { SEED_MIN_YEAR, hasFamousRecent, pickSeed } from "./gameEngine";
+import { SEED_MIN_YEAR, famousSlice, hasFamousRecent, pickSeed } from "./gameEngine";
 
 /**
  * Unlimited → Random Mix: one round across several topics. The seed comes from a random
@@ -53,6 +53,8 @@ export type Mix = {
   metaOf: (topicId: string) => TopicMeta;
   topicOf: (item: TopicItem) => string;
   itemsOf: (topicId: string) => TopicItem[];
+  /** A topic's most famous items (see famousSlice), mix ids. Used by the When mode's questions. */
+  famousOf: (topicId: string) => TopicItem[];
   /** Matches typed text against the asked topic only. */
   resolve: (topicId: string, text: string) => GuessMatch;
   /** A recent, well-known seed from a random topic that reaches the present. */
@@ -252,6 +254,7 @@ export function buildMix(topics: Topic[], { seed }: { seed?: string } = {}): Mix
     metaOf: (id) => byId.get(id)?.meta ?? meta,
     topicOf,
     itemsOf: (id) => local.get(id) ?? [],
+    famousOf: (id) => famousSlice(local.get(id) ?? []),
     resolve: (topicId, text) => {
       const m = matcherFor(topicId)(text);
       return m.kind === "none" ? m : { ...m, item: toMixItem(topicId, m.item) };

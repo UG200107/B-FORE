@@ -2,15 +2,16 @@
 
 import { motion } from "motion/react";
 
-/** Arcade is hidden for now; Unlimited (Thematic or Random) takes its place. */
-export type Mode = "daily" | "unlimited";
+/** Arcade is hidden for now; Unlimited (Thematic or Random) takes its place. "When" = guess the year. */
+export type Mode = "daily" | "when" | "unlimited";
 
 const MODES: { id: Mode; label: string }[] = [
   { id: "daily", label: "Daily" },
+  { id: "when", label: "When" },
   { id: "unlimited", label: "Unlimited" },
 ];
 
-/** Minimal segmented toggle between Daily Rewind and Unlimited. */
+/** Minimal segmented toggle between Daily Rewind, When and Unlimited. */
 export function ModeSwitch({ mode, onChange }: { mode: Mode; onChange: (m: Mode) => void }) {
   return (
     <div role="tablist" aria-label="Game mode" className="flex rounded-full border border-zinc-800 bg-zinc-900/60 p-0.5">

@@ -164,6 +164,17 @@ class SoundEngine {
     this.tick(a.ctx, a.out, a.ctx.currentTime + 0.01, urgent ? 0.12 : 0.07, urgent ? 2600 : 1900);
   }
 
+  private lastDetent = 0;
+  /** Dial detent: a soft mechanical click per year while the Earth is turned (rate-limited). */
+  detent(back: boolean): void {
+    const a = this.ready();
+    if (!a) return;
+    const now = a.ctx.currentTime;
+    if (now - this.lastDetent < 0.028) return;
+    this.lastDetent = now;
+    this.tick(a.ctx, a.out, now + 0.005, 0.09, back ? 2300 : 2900);
+  }
+
   /** Paradox: low punchy thud + glitchy stutter, lasting about as long as the shudder (0.5s). */
   paradox(): void {
     const a = this.ready();
