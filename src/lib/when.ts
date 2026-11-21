@@ -1,5 +1,4 @@
-import { rankFor, LIFE_BONUS, LOSS_PENALTY, type Rank } from "@/utils/scoring";
-import { MAX_LIVES } from "./gameEngine";
+import { rankFor, type Rank } from "@/utils/scoring";
 import { LEVEL_MOVES, type Level } from "./level";
 
 /**
@@ -13,6 +12,7 @@ import { LEVEL_MOVES, type Level } from "./level";
  *
  * A guess counts when it's within a tolerance that grows with age: dating something from
  * 2015 needs to be within a few years; for 1000 BCE, 800 BCE is a good guess.
+ * No lives: every question is played, and a miss costs points, more the further off it is.
  */
 
 /** "Now" for ages; also the newest year the dial allows. */
@@ -28,6 +28,10 @@ const TOL_SLOPE: Record<Level, number> = { easy: 0.15, medium: 0.12, hard: 0.08 
 export const WHEN_MAX_POINTS = 500;
 const RANGE_FLOOR = 150;
 export const SPEED_POINTS = 100;
+/** A miss costs MISS_MIN just outside the range, MISS_PER_TOL more per extra tolerance width, up to MISS_MAX (also a timeout). */
+const MISS_MIN = 50;
+const MISS_PER_TOL = 75;
+export const MISS_MAX = 300;
 
 export function ageOf(year: number): number {
   return Math.max(0, WHEN_NOW - year);
@@ -125,6 +129,7 @@ export type WhenAnswer = {
   error: number | null;
   tolerance: number;
   result: WhenResult;
+  /** Negative for a miss or a timeout. */
   points: number;
   speedBonus: number;
 };
@@ -135,13 +140,12 @@ export type WhenState = {
   plan: WhenItem[];
   /** Questions in the round. */
   total: number;
-  lives: number;
   /** The question being asked (plan[answers.length]). */
   question: WhenItem | null;
   answers: WhenAnswer[];
   status: "playing" | "over";
-  /** done = all questions answered; lives = out of lives. */
-  endReason: "done" | "lives" | null;
+  /** done = all questions answered. */
+  endReason: "done" | null;
 };
 
 export type WhenAction =
@@ -159,11 +163,17 @@ export function scoreGuess(
   timeLeftFrac: number | null,
 ): Pick<WhenAnswer, "error" | "result" | "points" | "speedBonus"> {
   const error = Math.abs(guess - actual);
-  if (error > tolerance) return { error, result: "miss", points: 0, speedBonus: 0 };
+  if (error > tolerance) return { error, result: "miss", points: -missPenalty(error, tolerance), speedBonus: 0 };
   const points = error === 0 ? WHEN_MAX_POINTS : Math.round(RANGE_FLOOR + (WHEN_MAX_POINTS - RANGE_FLOOR) * (1 - error / (tolerance + 1)));
   const result: WhenResult = error === 0 ? "exact" : error <= tolerance / 2 ? "close" : "range";
   const speedBonus = timeLeftFrac === null ? 0 : Math.round(SPEED_POINTS * Math.max(0, Math.min(1, timeLeftFrac)));
   return { error, result, points, speedBonus };
+}
+
+/** How much a miss costs: 50 just outside the range, growing with how far off it is, up to 300. */
+export function missPenalty(error: number, tolerance: number): number {
+  const widths = error / Math.max(1, tolerance);
+  return Math.round(Math.min(MISS_MAX, MISS_MIN + MISS_PER_TOL * Math.max(0, widths - 1)));
 }
 
 export function createWhenState(level: Level, plan: WhenItem[]): WhenState {
@@ -171,7 +181,6 @@ export function createWhenState(level: Level, plan: WhenItem[]): WhenState {
     level,
     plan,
     total: plan.length,
-    lives: MAX_LIVES,
     question: plan[0] ?? null,
     answers: [],
     status: plan.length > 0 ? "playing" : "over",
@@ -180,13 +189,10 @@ export function createWhenState(level: Level, plan: WhenItem[]): WhenState {
 }
 
 function record(state: WhenState, answer: WhenAnswer): WhenState {
-  const lost = answer.result === "miss" || answer.result === "timeout";
-  const lives = state.lives - (lost ? 1 : 0);
   const answers = [...state.answers, answer];
-  const endReason: WhenState["endReason"] = lives <= 0 ? "lives" : answers.length >= state.total ? "done" : null;
+  const endReason: WhenState["endReason"] = answers.length >= state.total ? "done" : null;
   return {
     ...state,
-    lives,
     answers,
     status: endReason ? "over" : "playing",
     endReason,
@@ -201,7 +207,7 @@ export function whenReducer(state: WhenState | null, action: WhenAction): WhenSt
   const item = state.question;
   const tolerance = toleranceFor(item.year, state.level);
   if (action.type === "timeout") {
-    return record(state, { item, guess: null, error: null, tolerance, result: "timeout", points: 0, speedBonus: 0 });
+    return record(state, { item, guess: null, error: null, tolerance, result: "timeout", points: -MISS_MAX, speedBonus: 0 });
   }
   return record(state, {
     item,
@@ -214,28 +220,27 @@ export function whenReducer(state: WhenState | null, action: WhenAction): WhenSt
 /* ---------- Scoring ---------- */
 
 export type WhenScore = {
+  /** Points from answers in range. */
   accuracy: number;
   speed: number;
-  livesBonus: number;
-  lossPenalty: number;
+  /** Points lost to misses and timeouts (≤ 0). */
+  penalties: number;
+  misses: number;
   total: number;
   par: number;
   rank: Rank;
 };
 
-/** Round total: accuracy + speed, plus lives bonus when completed, minus the loss penalty. */
+/** Round total: accuracy + speed + penalties (negative). */
 export function scoreWhenRound(state: WhenState): WhenScore {
-  const accuracy = state.answers.reduce((s, a) => s + a.points, 0);
+  const accuracy = state.answers.reduce((s, a) => s + Math.max(0, a.points), 0);
+  const penalties = state.answers.reduce((s, a) => s + Math.min(0, a.points), 0);
   const speed = state.answers.reduce((s, a) => s + a.speedBonus, 0);
-  const finished = state.status === "over" && state.endReason !== "lives";
-  const livesBonus = finished ? state.lives * LIFE_BONUS : 0;
-  const lossPenalty = state.endReason === "lives" ? LOSS_PENALTY : 0;
-  const total = accuracy + speed + livesBonus - lossPenalty;
-  // Par: every answer well inside the range (~400) and no lives lost.
-  const par = state.total * 400 + MAX_LIVES * LIFE_BONUS;
-  const raw = rankFor(total, par);
-  const rank: Rank = state.endReason === "lives" && (raw === "S" || raw === "A") ? "B" : raw;
-  return { accuracy, speed, livesBonus, lossPenalty, total, par, rank };
+  const misses = state.answers.filter((a) => a.points < 0).length;
+  const total = accuracy + speed + penalties;
+  // Par: every answer well inside the range (~400 each).
+  const par = state.total * 400;
+  return { accuracy, speed, penalties, misses, total, par, rank: rankFor(total, par) };
 }
 
 /** Splits an item's question around its name, for highlighting: ["In what year was ", "Printing press", " invented?"]. */

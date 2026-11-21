@@ -30,9 +30,9 @@ type Props = {
   onChangeLevel: () => void;
 };
 
-function endText(state: WhenState): string {
-  if (state.endReason === "lives") return "Out of lives";
-  return `All ${state.total} questions answered`;
+function endText(state: WhenState, score: WhenScore): string {
+  const right = state.answers.length - score.misses;
+  return `${right} of ${state.answers.length} in range`;
 }
 
 /** End-of-round panel for the When mode: rank, points breakdown, and every guess vs. the real year. */
@@ -40,9 +40,9 @@ export function WhenSummary({ state, score, delay, onPlayAgain, onChangeLevel }:
   const rows: { label: string; value: number; hint?: string }[] = [
     { label: "Accuracy", value: score.accuracy, hint: `${state.answers.length} answers` },
     { label: "Speed Bonus", value: score.speed },
-    { label: "Lives Bonus", value: score.livesBonus },
   ];
-  if (score.lossPenalty > 0) rows.push({ label: "Lost the Round", value: -score.lossPenalty, hint: "all lives gone" });
+  if (score.penalties < 0)
+    rows.push({ label: "Wrong Answers", value: score.penalties, hint: `${score.misses} missed · the further off, the more it costs` });
 
   return (
     <PanelLayout
@@ -68,8 +68,8 @@ export function WhenSummary({ state, score, delay, onPlayAgain, onChangeLevel }:
       <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2 lg:gap-10">
         <div>
           <p className="text-[11px] uppercase tracking-[0.2em] text-zinc-600">When · {LEVEL_LABEL[state.level]}</p>
-          <p className={`mt-1 text-xs uppercase tracking-widest ${state.endReason === "lives" ? "text-rose-300" : "text-emerald-300"}`}>
-            {endText(state)}
+          <p className={`mt-1 text-xs uppercase tracking-widest ${score.misses > state.answers.length / 2 ? "text-rose-300" : "text-emerald-300"}`}>
+            {endText(state, score)}
           </p>
           <div className="mt-3 flex items-center gap-5">
             <motion.div
@@ -115,7 +115,7 @@ export function WhenSummary({ state, score, delay, onPlayAgain, onChangeLevel }:
                       {a.item.name}
                     </span>
                     <span className={`shrink-0 font-mono tabular-nums ${r.cls}`}>
-                      {a.points + a.speedBonus > 0 ? `+${a.points + a.speedBonus}` : r.label}
+                      {a.points + a.speedBonus >= 0 ? `+${a.points + a.speedBonus}` : `−${-(a.points + a.speedBonus)}`}
                     </span>
                   </div>
                   <div className="mt-0.5 font-mono text-xs text-zinc-500">

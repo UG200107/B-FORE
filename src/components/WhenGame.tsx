@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useAudioUnlock, useMuted } from "@/hooks/useSound";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useTurnTimer } from "@/hooks/useTurnTimer";
-import { MAX_LIVES, MOVE_SECONDS } from "@/lib/gameEngine";
+import { MOVE_SECONDS } from "@/lib/gameEngine";
 import { LEVELS, LEVEL_LABEL, LEVEL_MOVES, levelRules, type Level } from "@/lib/level";
 import {
   SPEED_POINTS,
@@ -24,7 +24,6 @@ import { sound } from "@/utils/soundEngine";
 import { spinProfile } from "@/utils/spin";
 import { recordRound } from "@/utils/stats";
 import { formatYear } from "@/utils/timeFormat";
-import { EarthBlast } from "./EarthBlast";
 import { EarthCanvas, type EarthTurn } from "./EarthCanvas";
 import { DomeEarthDial } from "./DomeEarthDial";
 import { EarthDial } from "./EarthDial";
@@ -38,8 +37,6 @@ const LEVEL_ACTIVE: Record<Level, string> = {
   medium: "border-amber-400/60 bg-amber-400/10 text-amber-200",
   hard: "border-rose-400/60 bg-rose-400/10 text-rose-200",
 };
-
-const BLAST_AT = 0.55;
 
 /** How far back each level's round reaches (see DEPTH in lib/when). */
 const REACH: Record<Level, string> = { easy: "the 1400s", medium: "500 BCE", hard: "the Stone Age" };
@@ -120,13 +117,11 @@ export function WhenGame({ pool, headerLeft, headerActions }: Props) {
 
   /* ---------- Round end ---------- */
   const score = useMemo(() => (state ? scoreWhenRound(state) : null), [state]);
-  const blasted = over && state?.endReason === "lives";
-  const endDelay = blasted ? BLAST_AT + 2.1 : profile.duration + 1.4;
+  const endDelay = profile.duration + 1.4;
   const endKey = over ? String(roundId) : null;
   useEffect(() => {
     if (!endKey || !state || !score) return;
-    if (blasted) sound.blast(BLAST_AT);
-    sound.roundEnd(blasted ? "powerdown" : score.rank === "S" || score.rank === "A" ? "victory" : "resolve", endDelay);
+    sound.roundEnd(score.rank === "S" || score.rank === "A" ? "victory" : score.total < 0 ? "powerdown" : "resolve", endDelay);
     recordRound({ topicId: "when", score: score.total, rank: score.rank });
     // Once per finished round.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -153,17 +148,7 @@ export function WhenGame({ pool, headerLeft, headerActions }: Props) {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
   const arcMode = !isDesktop && !!state;
   const earth = (
-    <div className="relative h-full w-full">
-      <motion.div
-        initial={false}
-        animate={blasted ? { scale: [1, 1.08, 0.15], opacity: [1, 1, 0] } : { scale: 1, opacity: 1 }}
-        transition={blasted ? { delay: BLAST_AT - 0.1, duration: 0.6, times: [0, 0.3, 1], ease: "easeIn" } : { duration: 0.5 }}
-        className="h-full w-full"
-      >
-        <EarthCanvas year={earthYear} spin={spin} paradoxKey={paradoxKey} turnRef={turn} className="h-full w-full" />
-      </motion.div>
-      {blasted && <EarthBlast key={`blast:${roundId}`} delay={BLAST_AT} seed={roundId + 1} />}
-    </div>
+    <EarthCanvas year={earthYear} spin={spin} paradoxKey={paradoxKey} turnRef={turn} className="h-full w-full" />
   );
 
   const runningTotal = state ? state.answers.reduce((s, a) => s + a.points + a.speedBonus, 0) : 0;
@@ -193,17 +178,7 @@ export function WhenGame({ pool, headerLeft, headerActions }: Props) {
             <div className="flex items-center justify-center gap-5 lg:absolute lg:bottom-0 lg:left-1/2 lg:top-6 lg:-translate-x-1/2 lg:gap-9">
               {timed && <Stat label="Time" value={over ? 0 : secondsLeft} warn={secondsLeft <= 5} />}
               <Stat label="Question" value={`${Math.min(n + (playing ? 1 : 0), state.total)}/${state.total}`} />
-              <div className="flex flex-col items-center leading-none">
-                <span className="mb-1 text-[9px] uppercase tracking-[0.2em] text-zinc-500 lg:text-[11px]">Lives</span>
-                <span className="flex h-6 items-center gap-1 text-base lg:h-9 lg:text-2xl" aria-label={`${state.lives} lives`}>
-                  {Array.from({ length: MAX_LIVES }, (_, i) => (
-                    <span key={i} className={i < state.lives ? "text-rose-500" : "text-rose-900"}>
-                      {i < state.lives ? "♥" : "✕"}
-                    </span>
-                  ))}
-                </span>
-              </div>
-              <Stat label="Score" value={runningTotal} accent />
+              <Stat label="Score" value={runningTotal} accent warn={runningTotal < 0} />
             </div>
           )}
         </header>
@@ -386,7 +361,7 @@ function Stat({ label, value, accent, warn }: { label: string; value: ReactNode;
   );
 }
 
-/** "Exact! It was 2018 · +600", "Miss: it was 1997 (you said 2004, ±3) · −1 life", … */
+/** "Exact! It was 2018 · +600", "Miss: it was 1997 (you said 2004, ±3) · −95", … */
 function Verdict({ answer: a }: { answer: WhenAnswer }) {
   const year = formatYear(a.item.year, "year");
   const pts = a.points + a.speedBonus;
@@ -400,9 +375,9 @@ function Verdict({ answer: a }: { answer: WhenAnswer }) {
   const guess = a.guess === null ? "–" : formatYear(a.guess, "year");
   const text =
     a.result === "timeout"
-      ? `Time's up · it was ${year} · −1 life`
+      ? `Time's up · it was ${year} · −${-a.points}`
       : a.result === "miss"
-        ? `Miss · it was ${year} (you said ${guess}, ±${a.tolerance}) · −1 life`
+        ? `Miss · it was ${year} (you said ${guess}, ±${a.tolerance}) · −${-a.points}`
         : a.result === "exact"
           ? `Exact! It was ${year} · +${pts}`
           : `${a.result === "close" ? "Close" : "In range"} · ${guess} vs ${year} (±${a.tolerance}) · +${pts}`;
