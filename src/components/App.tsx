@@ -31,7 +31,7 @@ import { EarthCanvas } from "./EarthCanvas";
 import { Game } from "./Game";
 import { ModeSwitch, type Mode } from "./ModeSwitch";
 import { WhenGame } from "./WhenGame";
-import { loadYearQuizPool } from "@/data/loadYearQuiz";
+import { loadEasyQuizPool } from "@/data/loadEasyQuiz";
 import type { WhenPool } from "@/lib/when";
 import { ScrollStage, StagePanelOverride, type StagePanel } from "./ScrollStage";
 import { SpaceBackdrop } from "./SpaceBackdrop";
@@ -263,7 +263,7 @@ function WhenView(props: { splash: SplashFn; headerLeft: ReactNode; headerAction
   const [attempt, setAttempt] = useState(0);
   useEffect(() => {
     let live = true;
-    loadYearQuizPool().then(
+    loadEasyQuizPool().then(
       (items) => live && setPool({ items, error: null }),
       (e: Error) => live && setPool({ items: null, error: e.message }),
     );

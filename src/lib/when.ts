@@ -3,12 +3,12 @@ import { LEVEL_MOVES, type Level } from "./level";
 
 /**
  * "When" mode: the engine asks "In what year was the printing press invented?" and the
- * player dials in the year. Data: the year-quiz set (/data/year-quiz, 41 topics, ~7,300
- * questions with their own wording, each "famous" or "mid-tier").
+ * player dials in the year. Data: the easy-quiz set (/data/easy-quiz, 60 topics × 50 easy
+ * questions with their own wording and a hint).
  *
  * A round goes back in time on a stretching (log) scale: the first question is from the
  * last few years, the last one from deep history (Easy ≈ the 1400s, Medium ≈ 500 BCE,
- * Hard ≈ the dawn of civilisation). Famous questions dominate; mid-tier ones are rare.
+ * Hard ≈ the dawn of civilisation). Data with tiers can mark questions "mid-tier": rare.
  *
  * A guess counts when it's within a tolerance that grows with age: dating something from
  * 2015 needs to be within a few years; for 1000 BCE, 800 BCE is a good guess.
@@ -245,7 +245,9 @@ export function scoreWhenRound(state: WhenState): WhenScore {
 
 /** Splits an item's question around its name, for highlighting: ["In what year was ", "Printing press", " invented?"]. */
 export function splitQuestion(item: WhenItem): [string, string, string] {
-  const i = item.question.indexOf(item.name);
+  // Case-insensitive: "Fidget spinner" inside "…did the fidget spinner craze…".
+  const i = item.question.toLowerCase().indexOf(item.name.toLowerCase());
   if (i < 0) return [item.question + " ", "", ""];
-  return [item.question.slice(0, i), item.name, item.question.slice(i + item.name.length)];
+  const end = i + item.name.length;
+  return [item.question.slice(0, i), item.question.slice(i, end), item.question.slice(end)];
 }

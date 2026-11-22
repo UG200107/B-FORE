@@ -42,7 +42,7 @@ const LEVEL_ACTIVE: Record<Level, string> = {
 const REACH: Record<Level, string> = { easy: "the 1400s", medium: "500 BCE", hard: "the Stone Age" };
 
 type Props = {
-  /** Every question (the year-quiz data). */
+  /** Every question (the easy-quiz data). */
   pool: WhenPool;
   headerLeft: ReactNode;
   headerActions: ReactNode;
